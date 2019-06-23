@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script1.js" async></script>
+    <title>Igra memorije!</title>
+    <!--Google fontovi-->
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Caveat:400,700|Monoton" rel="stylesheet">
+  </head>
+
+  <body>
+    <!--Naziv igre-->
+    <h1 class="page-title">Igra memorije</h1>
+
+    <!--Overlay prije početka-->
+    <div class="overlay-text visible"> <!--Vidi se ako je aktivna visible klasa-->
+        KLIKNI ZA POČETAK IGRE!
+    </div>
+
+    <!--Overlay za kraj-->
+    <div id="game-over-text" class="overlay-text"> <!--Vidi se ako je aktivna visible klasa-->
+        KRAJ IGRE :(
+        <span class="overlay-text-small">Klikni za novu igru</span>
+    </div>
+
+    <!--Overlay za pobjedu-->
+    <div id="victory-text" class="overlay-text"> <!--Vidi se ako je aktivna visible klasa-->
+        BRAVOOO!
+        <span class="overlay-text-small">Klikni za novu igru</span>
+    </div>
+
+    <!--kontejner sa svim podacima za igru-->
+    <div class="game-container">
+
+      <!--kontejner sa info elemente-tajmer i "number of flips"-->
+      <div class="game-info-container">
+
+        <!--Time-->
+        <div class="game-info">
+          Vrijeme <span id="time-remaining">50</span>
+        </div>
+
+        <!--Flips-->
+        <div class="game-info">
+          Pokušaj <span id="flips">0</span>
+        </div>
+      </div>
+
+      <div class="card"> <!-- visible class - prikaz prednje strane karte -->
+        <div class="card-back card-face">
+          <img class="slika" src="Assets/Images/clipart1402288-2.png" >
+        </div>
+
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/marsovac01.png" >
+        </div>
+      </div>
+
+      <div class="card"> <!-- visible class - prikaz prednje strane karte -->
+        <div class="card-back card-face">
+          <img class="slika" src="Assets/Images/clipart1402288-2.png" >
+        </div>
+
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/marsovac01.png" >
+        </div>
+      </div>
+
+
+      <div class="card"> <!-- visible class - prikaz prednje strane karte -->
+        <div class="card-back card-face">
+          <img class="slika" src="Assets/Images/clipart1402288-2.png" >
+        </div>
+
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/marsovac02.png" >
+        </div>
+      </div>
+
+
+      <div class="card"> <!-- visible class - prikaz prednje strane karte -->
+        <div class="card-back card-face">
+          <img class="slika" src="Assets/Images/clipart1402288-2.png" >
+        </div>
+
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/marsovac02.png" >
+        </div>
+      </div>
+
+      <div class="card"> <!-- visible class - prikaz prednje strane karte -->
+        <div class="card-back card-face">
+          <img class="slika" src="Assets/Images/clipart1402288-2.png" >
+        </div>
+
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/marsovac03.png" >
+        </div>
+      </div>
+
+      <div class="card"> <!-- visible class - prikaz prednje strane karte -->
+        <div class="card-back card-face">
+          <img class="slika" src="Assets/Images/clipart1402288-2.png" >
+        </div>
+
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/marsovac03.png" >
+        </div>
+      </div>
+
+      <div class="card"> <!-- visible class - prikaz prednje strane karte -->
+        <div class="card-back card-face">
+          <img class="slika" src="Assets/Images/clipart1402288-2.png" >
+        </div>
+
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/marsovac04.png" >
+        </div>
+      </div>
+
+      <div class="card"> <!-- visible class - prikaz prednje strane karte -->
+        <div class="card-back card-face">
+          <img class="slika" src="Assets/Images/clipart1402288-2.png" >
+        </div>
+
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/marsovac04.png" >
+        </div>
+      </div>
+
+      <div class="card"> <!-- visible class - prikaz prednje strane karte -->
+        <div class="card-back card-face">
+          <img class="slika" src="Assets/Images/clipart1402288-2.png" >
+        </div>
+
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/marsovac05.png" >
+        </div>
+      </div>
+
+      <div class="card"> <!-- visible class - prikaz prednje strane karte -->
+        <div class="card-back card-face">
+          <img class="slika" src="Assets/Images/clipart1402288-2.png" >
+        </div>
+
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/marsovac05.png" >
+        </div>
+      </div>
+
+      <div class="card"> <!-- visible class - prikaz prednje strane karte -->
+        <div class="card-back card-face">
+          <img class="slika" src="Assets/Images/clipart1402288-2.png" >
+        </div>
+
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/marsovac06.png" >
+        </div>
+      </div>
+
+      <div class="card"> <!-- visible class - prikaz prednje strane karte -->
+        <div class="card-back card-face">
+          <img class="slika" src="Assets/Images/clipart1402288-2.png" >
+        </div>
+
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/marsovac06.png" >
+        </div>
+      </div>
+    </div>
+  <a href="index.html" class="button">Nazad</a>
+
+  </body>
+</html>

@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+  cursor: url("Assets/Cursors/nat1007.cur"),auto;
+}
+
+body {
+  background: url("Assets/Images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  }
+
+/* pravilo za prikaz naslova*/
+.page-title {
+  color: #fff;
+  font-family: 'Monoton', cursive,sans-serif;
+  text-align: center;
+  font-size: 4em;
+}
+
+/* pravilo za prikaz info elemenata igre u jednoj koloni*/
+.game-info-container {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* pravilo za prikaz vremena i broja pokušaja*/
+.game-info {
+  color: yellow;
+  font-size: 2em;
+  font-family:'Amatic SC', cursive,sans-serif;
+}
+
+/* pravila za prikaz elemenata u game kontejneru*/
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(4,auto);
+  grid-gap: 10px;
+  margin: 50px;
+  justify-content: center;
+  perspective: 500px; /* udaljenost korisnika od ekrana*/
+}
+
+/* dimenzije i pozicija karte*/
+.card {
+  position: relative;
+  height: 160px;
+  width: 125px;
+}
+
+/* karta kada je kursor iznad nje-kursor*/
+.card:hover {
+  cursor: url("Assets/Cursors/cur862.ani"), url("Assets/Cursors/cur862.png"),auto;
+}
+
+/*Detalji koji se tiču prednje strane karte*/
+.card-front {
+  background-color: azure;
+  transform: rotateY(180deg); /* Okretanje prednje karte - da bude ispod zadnje strane*/
+}
+
+/*Veličina slike na prednjoj karti prije hover-a*/
+.card-value {
+  transition: transform 100ms easy-in-out;
+  transform: scale(.95);
+}
+
+/*Ponašanje prednje strane karte na hover*/
+.card-front:hover .card-value {
+  transform: scale(1);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden; /* Što je kontra posmatraču nije vidljivo*/
+  border-radius: 12px;
+  border-width: 2px;
+  border-style: solid;
+  transition: transform 500ms ease-in-out;
+}
+
+/*skrivanje zadnje strane karte*/
+.card.visible .card-back {
+  transform: rotateY(-180deg);
+}
+
+/*prikaz prednje strane karte*/
+.card.visible .card-front {
+  transform: rotateY(0);
+}
+
+.overlay-text {
+  display: none; /*nije prikazano dok se ne aktivira visible klasa*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 100; /*prikaz ispred svih sadržaja*/
+  color: white;
+  font-family: 'Amatic SC', cursive,sans-serif;
+}
+
+.overlay-text-small {
+  font-size: .3em;
+}
+
+.overlay-text.visible {
+  display: flex;
+  flex-direction: column;
+  animation: overlay-grow 500ms forwards;
+}
+
+@keyframes overlay-grow {
+  from {
+    background-color: rgba(0,0,0,0);
+    font-size: 0;
+  }
+  to {
+    background-color: rgba(0,0,0,0.9);
+    font-size: 7em;
+  }
+}
+
+/*detalji zadnje strane karte*/
+.card-back {
+  background-color: black;
+  border-color: darkgrey;
+}
+
+.slika {
+transition: transform 100ms ease-in-out;
+}
+
+.card-back:hover .slika {
+  transform: scale(1.05);
+}
+
+/*responsive podešavanja*/
+@media (max-width: 600px) {
+  .game-container {
+    grid-template-columns: repeat(2,auto);
+  }
+  .game-info-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2em;
+    margin: 4px 2px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Amatic SC', cursive,sans-serif;
+    font-weight: bold;
+}
+
+.button:hover {
+  color:yellow;
+}

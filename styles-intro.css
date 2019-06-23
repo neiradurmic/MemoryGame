@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+  cursor: url("Assets/Cursors/nat1007.cur"),auto;
+}
+
+body {
+  background: url("Assets/Images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  }
+
+/* pravilo za prikaz naslova*/
+.page-title {
+  margin-top:200px;
+  color: #fff;
+  font-family: 'Monoton', cursive,sans-serif;
+  text-align: center;
+  font-size: 4em;
+}
+
+.podnaslov {
+  color: #fff;
+  font-family: 'Amatic SC', cursive,sans-serif;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color:yellow;
+}
+
+.credits {
+  width: 7%;
+  background-color: rgba(220,220,220,0.8);
+  border-radius: 10px;
+  text-align: center;
+  margin: auto;
+  color: black;
+  font-family:'Caveat', cursive;
+  font-size: 1.3em;
+}

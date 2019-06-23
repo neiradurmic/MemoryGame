@@ -1,0 +1,40 @@
+/* pravila za prikaz elemenata u game kontejneru*/
+.game-container {
+  grid-template-columns: repeat(6,auto);
+}
+
+body {
+  background: url("Assets/Images/background2.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* pravilo za prikaz vremena i broja pokušaja*/
+.game-info {
+  color: #000;
+  font-size: 2em;
+  font-family:'Amatic SC', cursive,sans-serif;
+}
+
+/*responsive podešavanja*/
+@media (max-width: 600px) {
+  .game-container {
+    grid-template-columns: repeat(2,auto);
+  }
+  .game-info-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.button {
+    border: none;
+    color: black;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2em;
+    margin: 4px 2px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Amatic SC', cursive,sans-serif;
+}
